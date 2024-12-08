@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(145deg, #69606a, #7d727e);
+}
+
+.app {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  padding: 40px 50px;
+  border-radius: 50px;
+  background: #756b76;
+  box-shadow:
+    inset 32px 32px 64px #635b64,
+    inset -32px -32px 64px #877b88;
+  text-align: center;
+  color: #e8e8e8;
+}
+
+.app h1 {
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+#inputText {
+  margin-top: 25px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 300ms ease-in-out;
+}
+
+#inputText:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow:
+    13px 13px 100px #969696,
+    -13px -13px 100px #ffffff;
+}
+
+#button {
+  margin-top: 25px;
+  position: relative;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #69606a, #7d727e);
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 1),
+    0 10px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #635b64;
+}
+
+#button:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  bottom: -1px;
+  left: -1px;
+  background: linear-gradient(to bottom, #615161, #635b64);
+  z-index: -1;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  opacity: 1;
+}
+
+#button:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 1),
+    0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#qrBox {
+  max-height: 0px;
+  transition: all ease 1s;
+  overflow: hidden;
+}
+
+#qrCode {
+  width: 150px;
+  height: 150px;
+  outline: solid 1px #e8e8e8;
+  outline-offset: 10px;
+  margin: 40px;
+}
+
+/*.hidden {*/
+/*  display: none;*/
+/*}*/
+
+#qrBox.show-img {
+  max-height: 220px;
+}
+
+#qrText.showup {
+  animation: showup 5s ease-in;
+}
+
+@keyframes showup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

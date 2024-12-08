@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR code Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <h1>Qr Generator</h1>
+      <input
+        type="text"
+        id="inputText"
+        name="input"
+        value=""
+        placeholder="text or URL"
+        autocomplete="off"
+      />
+      <button type="button" id="button">Create QR code</button>
+      <div id="qrBox">
+        <img id="qrCode" src="" alt="" />
+      </div>
+      <p id="qrText"></p>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
